@@ -51,11 +51,9 @@
   
 
   连接完成后，如果你没有后续的动作，这个连接就处于空闲状态，你可以在 show processlist 命令中看到它。文本中这个图是 show processlist 的结果，其中的 Command 列显示为“Sleep”的这一行，就表示现在系统里面有一个空闲连接。
-  ![image-20231128183002221](/Users/yangwei/Library/Application Support/typora-user-images/image-20231128183002221.png)
+ 
+![image-20231128183002221.png](..%2Fimage%2Fmysql%2Fimage-20231128183002221.png)
 
-  
-
-  
 
   客户端如果太长时间没动静，连接器就会自动将它断开。这个时间是由参数 wait_timeout 控制的，默认值是 8 小时。
 
