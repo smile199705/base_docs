@@ -1,5 +1,5 @@
 * JavaScript
-  * [基础总结](./docs)
+  * [基础总结](./docs/)
 
 * Node.js
   * [内网开发之pkg打包nodejs项目踩坑实践](./docs/nodejs/内网开发之pkg打包nodejs项目踩坑实践.md)
