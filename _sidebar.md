@@ -3,6 +3,7 @@
 
 * Node.js
   * [内网开发之pkg打包nodejs项目踩坑实践](./docs/nodejs/内网开发之pkg打包nodejs项目踩坑实践.md)
+  * [koa2约定式路由自动挂载mount-koa-routes@next](./docs/nodejs/koa2约定式路由自动挂载mount-koa-routes@next.md)
 
 * 数据库
   * [【mysql】数据库的SQL是如何执行](./docs/mysql/数据库的SQL是如何执行？.md)

@@ -1,5 +1,5 @@
 # 内网开发之pkg打包nodejs项目踩坑实践
-最近新入职新公司，内网开发（🫥）。将现有nodejs服务打包成指定平台（国产麒麟系统V10，arm64架构）可执行文件交付，避免源代码泄露。在我完完全全掌握了他的原理后，我终于解决了我所遇到的坑，特此记录学习，参考 [https://github.com/smile199705/node-axle](https://github.com/smile199705/node-axle) (基于es6规范封装 Express + DM8 + WebSocket + PKG )
+最近新入职新公司，内网开发（🫥）。将现有nodejs服务打包成指定平台（国产麒麟系统V10，arm64架构）可执行文件交付，避免源代码泄露。在我完完全全掌握了他的原理后，我终于解决了我所遇到的坑，特此记录学习，参考 [https://github.com/smile199705/express-axle](https://github.com/smile199705/express-axle) (基于es6规范封装 Express + DM8 + WebSocket + PKG )
 
 # 运行环境
 
