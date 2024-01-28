@@ -5,6 +5,7 @@
 * Node.js
   * [内网开发之pkg打包nodejs项目踩坑实践](./nodejs/内网开发之pkg打包nodejs项目踩坑实践.md)
   * [koa2约定式路由自动挂载mount-koa-routes@next](./nodejs/koa2约定式路由自动挂载mount-koa-routes@next.md)
+  * [测试github pages构建](./nodejs/test.md)
 
 * 数据库
   * [【mysql】数据库的SQL是如何执行](./mysql/数据库的SQL是如何执行？.md)
