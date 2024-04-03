@@ -1,1 +1,6 @@
 theme: jekyll-theme-cayman
+baseurl: /
+markdown: kramdown
+
+title: smile97的技术小屋🍀
+description: 本文档记录@smile97从事Node.js开发以来的学习和工作经验总结
