@@ -24,15 +24,12 @@
 // eat.js
 const EventEmitter = require('events').EventEmitter;
 const emitter = new EventEmitter();
-
 emitter.on("吃饭", function(item) {
     console.log(`我饿了，要吃${item}`)
 });
-
 emitter.emit("吃饭", "面条");
 ```
 运行程序之后效果如下展示
-
 > 我饿了，要吃面条
 
 除了上面使用的emit、on方法外还有once（添加一个一次性监听器）、removeListener（从事件中删除事件监听器）、removeAllListeners(删除事件的所有侦听器）、newListener（追踪监听器何时添加）等。
