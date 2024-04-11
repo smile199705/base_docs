@@ -10,6 +10,7 @@
   * [测试github pages构建](docs/nodejs/test.md)
 * NPM 模块
   * [如何发布一个NPM包？](docs/npm/如何发布一个NPM包？.md)
+  * [npm扩展使用](docs/npm/npm扩展使用.md)
 * 数据库
   * [【mysql】数据库的SQL是如何执行](docs/mysql/数据库的SQL是如何执行？.md)
 

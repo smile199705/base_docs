@@ -20,6 +20,7 @@
 主要用到以下两个API，触发、注册一个监听函数。
 - emit： 触发一个监听函数
 - on： 注册一个监听函数
+
 ```javascript
 // eat.js
 const EventEmitter = require('events').EventEmitter;
