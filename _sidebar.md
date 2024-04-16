@@ -1,5 +1,6 @@
 * JavaScript
   * [基础总结](docs/)
+  * [javascript数据类型之代码基础功](docs/javascript/JS的数据类型（实用版）.md)
   * [delete到底在删除什么？](docs/javascript/delete到底在删除什么？.md)
 
 * Node.js
