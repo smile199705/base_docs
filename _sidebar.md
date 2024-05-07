@@ -2,6 +2,7 @@
   * [基础总结](docs/)
   * [JS的数据类型（实用版）](docs/javascript/JS的数据类型（实用版）.md)
   * [delete到底在删除什么？](docs/javascript/delete到底在删除什么？.md)
+  * [JS中使用Map数据结构到底有啥好处？](docs/javascript/JS中使用Map数据结构到底有啥好处？.md)
 
 * Node.js
   * [内网开发之pkg打包nodejs项目踩坑实践](docs/nodejs/内网开发之pkg打包nodejs项目踩坑实践.md)
