@@ -3,6 +3,8 @@
   * [JS的数据类型（实用版）](docs/javascript/JS的数据类型（实用版）.md)
   * [delete到底在删除什么？](docs/javascript/delete到底在删除什么？.md)
   * [JS中使用Map数据结构到底有啥好处？](docs/javascript/JS中使用Map数据结构到底有啥好处？.md)
+  * [如何实现一个深浅拷贝](docs/javascript/如何实现一个深浅拷贝.md)
+  * [彻底搞懂原型和原型链](docs/javascript/彻底搞懂原型和原型链.md)
 
 * Node.js
   * [内网开发之pkg打包nodejs项目踩坑实践](docs/nodejs/内网开发之pkg打包nodejs项目踩坑实践.md)
