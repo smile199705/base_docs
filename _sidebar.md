@@ -1,12 +1,15 @@
 * JavaScript
-  * [基础总结](docs/)
+  * [JS的数据类型（实用版）](docs/javascript/JS的数据类型（实用版）.md)
   * [delete到底在删除什么？](docs/javascript/delete到底在删除什么？.md)
+  * [JS中使用Map数据结构到底有啥好处？](docs/javascript/JS中使用Map数据结构到底有啥好处？.md)
+  * [如何实现一个深浅拷贝](docs/javascript/如何实现一个深浅拷贝.md)
+  * [彻底搞懂原型和原型链](docs/javascript/彻底搞懂原型和原型链.md)
 
 * Node.js
   * [内网开发之pkg打包nodejs项目踩坑实践](docs/nodejs/内网开发之pkg打包nodejs项目踩坑实践.md)
   * [koa2约定式路由自动挂载mount-koa-routes@next](docs/nodejs/koa2约定式路由自动挂载mount-koa-routes@next.md)
-
   * [Node.js中Events的EventEmitter是什么？](docs/nodejs/Node.js中Events的EventEmitter是什么？.md)
+  * [PM2的cluster模式部署项目的实践汇总](docs/nodejs/PM2的cluster模式部署项目的实践汇总.md)
   * [测试github pages构建](docs/nodejs/test.md)
 * NPM 模块
   * [如何发布一个NPM包？](docs/npm/如何发布一个NPM包？.md)

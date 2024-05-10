@@ -197,3 +197,41 @@ pull.on('message', function (msg) {
     console.log('work: %s', msg.toString())
 })
 ```
+## 问题：
+### EventEmitter事件是同步的还是异步的？
+- 首先不能明确说事件是同步的还是异步的。因为EventEmitter会按照监听器注册的顺序同步地调用所有监听器。
+所以必须确保事件的排序正确，且避免竞态条件。
+```javascript
+const events = require('events');
+const emitter = new events.EventEmitter();
+
+emitter.on('test',function(){
+    console.log(111)
+});
+emitter.emit('test');
+console.log(222)
+
+// 输出
+// 111
+// 222
+```
+也可以使用 setImmediate() 或 process.nextTick() 切换到异步模式，代码如下所示：
+```javascript
+const events = require('events');
+const emitter = new events.EventEmitter();
+
+emitter.on('test',function(){
+    setImmediate(() => {
+        console.log(111);
+    });
+});
+emitter.emit('test');
+console.log(222)
+
+// 输出
+// 222
+// 111
+```
+
+## 总结
+Node.j许多成功的模块和框架都是基于EventEmitter的，因此学会EventEmitter的使用，并在业务代码中和框架封装中显得特别有用。
