@@ -22,4 +22,5 @@
 
 * Environment
   * [一文了解如何搭建Typora + docsify文档系统](docs/environment/一文了解如何搭建Typora%20+%20docsify文档系统.md)
+  * [git相关操作](docs/environment/git相关操作.md)
   * [GitHub 2FA（双因素身份验证） 于2024年3月13日开始执行提高软件安全标准？](docs/environment/GitHub%202FA（双因素身份验证）%20于2024年3月13日开始执行提高软件安全标准？.md)
