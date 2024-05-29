@@ -23,7 +23,7 @@ console.timeEnd(maopao(arr), '=====')
 // 快速排序
 console.time(quickSort(arr))
 function quickSort(arr) {
-    if (arr.length > 2) {
+    if (arr.length < 2) {
         return arr
     }
     // 声明基准值
@@ -34,7 +34,7 @@ function quickSort(arr) {
         if (arr[i] < pivot) {
             left.push(arr[i])
         }
-        if (arr[i] < pivot) {
+        if (arr[i] > pivot) {
             right.push(arr[i])
         }
     }
@@ -62,22 +62,22 @@ const arr = [5, 3, 8, 4, 2, 7, 1];
 // console.log(sortedArr); // 输出：[1, 2, 3, 4, 5, 7, 8]
 
 // 插入排序再实践
-function insertSort(array) {
-    for (let i = 1; i < array.length; i++) {
-        // 拿到数组第二个数
-        let current = array[i]
-        let j = i - 1
-        // 从第一个位置开始跟当前位置的开始比较,如果当前值小于前面的数
-        while(j >= 0 && current < array[j]) {
-            array[j + 1] = array[j]
-            j --
-        }
-        array[j + 1] = current
-    }
-    return array
-}
-const sortArr = insertSort(arr)
-console.log(sortArr)
+// function insertSort(array) {
+//     for (let i = 1; i < array.length; i++) {
+//         // 拿到数组第二个数
+//         let current = array[i]
+//         let j = i - 1
+//         // 从第一个位置开始跟当前位置的开始比较,如果当前值小于前面的数
+//         while(j >= 0 && current < array[j]) {
+//             array[j + 1] = array[j]
+//             j --
+//         }
+//         array[j + 1] = current
+//     }
+//     return array
+// }
+// const sortArr = insertSort(arr)
+// console.log(sortArr)
 
 
 
@@ -114,32 +114,32 @@ let a = [1, 3, 6, 3, 23, 76, 1, 34, 222, 6, 456, 221];
  * @param array
  * @returns {*}
  */
-// function mergeSort(array) {
-//     if (array.length === 1) return array
-//     let mid = Math.floor(array.length / 2)
-//     let left = array.slice(0, mid)
-//     let right = array.slice(mid, array.length)
-//     return merge(mergeSort(left), mergeSort(right))
-// }
+function mergeSort(array) {
+    if (array.length === 1) return array
+    let mid = Math.floor(array.length / 2)
+    let left = array.slice(0, mid)
+    let right = array.slice(mid, array.length)
+    return merge(mergeSort(left), mergeSort(right))
+}
 
-// function merge(left, right) {
-//     console.log(left, right)
-//     const result = []
-//     let il = 0
-//     let ir = 0
-//     while (il < left.length && ir < right.length) {
-//         if (left[il] < right[ir]) {
-//             result.push(left[il++])
-//         } else {
-//             result.push(right[ir++])
-//         }
-//     }
-//     return [...result, ...left.slice(il), ...right.slice(ir)]
-//     // return result.concat(left.slice(il)).concat(right.slice(ir))
-// }
-//
-// const mergeSort1 = mergeSort(a);
-// console.log(mergeSort1);
+function merge(left, right) {
+    // console.log(left, right)
+    const result = []
+    let il = 0
+    let ir = 0
+    while (il < left.length && ir < right.length) {
+        if (left[il] < right[ir]) {
+            result.push(left[il++])
+        } else {
+            result.push(right[ir++])
+        }
+    }
+    return [...result, ...left.slice(il), ...right.slice(ir)]
+    // return result.concat(left.slice(il)).concat(right.slice(ir))
+}
+
+const mergeSort1 = mergeSort(a);
+console.log(mergeSort1);
 
 
 // 4、数组扁平化（递归， reduce）
