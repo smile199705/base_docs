@@ -1,8 +1,6 @@
-
+  
 * 个人成长
   * [STAR法则](docs/personal)
-  * [STAR法则](docs/)
-
 
 * JavaScript
   * [JS的数据类型（实用版）](docs/javascript/JS的数据类型（实用版）.md)
@@ -23,6 +21,9 @@
   * [npm扩展使用](docs/npm/npm扩展使用.md)
 * 数据库
   * [【mysql】数据库的SQL是如何执行](docs/mysql/数据库的SQL是如何执行？.md)
+
+* 中间件
+  * [消息队列的使用](docs/net/消息队列的使用.md)
 
 * 实践栏目
   * [什么是SSE（Server-Sent Events）](docs/net/SSE(Server-Sent%20Events)服务端推送技术.md)
