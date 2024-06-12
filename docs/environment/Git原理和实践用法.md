@@ -71,6 +71,19 @@ git push origin B
 == 这种情况一般是在本地解决冲突，然后推送到线上 ==
 ```
 
+### GitHub推送不成功怎么解决
+
+> 当我执行了`git push origin master`将本项目推送至GitHub的时候，经常会出现：fatal: unable to access 'https://github.com/smile199705/base_docs.git/': Failed to connect to github.com port 443 after 75008 ms: Couldn't connect to server
+> 那该怎么解决呢
+
+其实可以看我的一篇掘金文章([GitHub不支持git用户名和密码进行pull和push](https://juejin.cn/post/7247694528621477945)),直接执行最后一行代码就可以解决这个问题，说白了就是重新设置用户登录信息从而保障git推送成功。
+```shell
+git remote set-url origin https://<your_token>@github.com/smile199705/axlejs_ai_code.git
+```
+
+
+
+
 ## 企业如何规范gitflow
 - development分支：开发分支，从master分支拉取
 - test分支： 测试完毕后merge到development和master分支
