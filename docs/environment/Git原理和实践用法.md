@@ -46,6 +46,31 @@
 
 > 可以用过`git log`找到指第一次迭代合并的分支hash值，然后通过git revert -m 1 <hash值>
 
+### 线上分支合并代码出现冲突怎么解决
+
+> 当一个项目的同一个文件的同一个位置被两个人同时在两个分支上修改了，并且此时要将两个分支都合并到test测试分支上，当A分支先合并之后B分支再合并发现合并出现冲突，无法线上合并成功。那么怎么解决呢？
+
+此时，发现是因为A分支的代码导致B代码合并过程中的出现冲突，那么这个时候，切换到B分支并更新本地最新的B分支代码，并通过`git merge --no-ff test`查看冲突代码，并在B分支本地修改。修改之后提交，再次合并提交到test分支即可解决
+
+```shell
+// 首先，同步自己当前最新代码
+git fetch B
+git pull B
+// 然后切换到远程测试分支test，拉取最新代码
+git branch test 
+git pull origin test 
+// 切换回B分支
+git branch B
+// 将A分支合并到test分支中的冲突代码合并到本地B分支，并手动解决
+git merge --no-ff test 
+// 进行B分支代码的提交和线上合并申请提交
+git add .
+git commit -m 'fix 解决合并冲突'
+git push origin B
+
+== 这种情况一般是在本地解决冲突，然后推送到线上 ==
+```
+
 ## 企业如何规范gitflow
 - development分支：开发分支，从master分支拉取
 - test分支： 测试完毕后merge到development和master分支
