@@ -15,6 +15,7 @@
   * [Node.js中Events的EventEmitter是什么？](docs/nodejs/Node.js中Events的EventEmitter是什么？.md)
   * [PM2的cluster模式部署项目的实践汇总](docs/nodejs/PM2的cluster模式部署项目的实践汇总.md)
   * [Node.js中如何处理大型JSON文件](docs/nodejs/Node.js中如何处理大型JSON对象？.md)
+  * [Stream中的pipe和pipeline](docs/nodejs/Stream中的pipe和pipeline.md)
   * [测试github pages构建](docs/nodejs/test.md)
 * NPM 模块
   * [如何发布一个NPM包？](docs/npm/如何发布一个NPM包？.md)
