@@ -7,7 +7,6 @@ function InitEventEmitter() {
 
 util.inherits(InitEventEmitter, events.EventEmitter)
 
-
 const init = new InitEventEmitter()
 
 init.on('start', (option) => {

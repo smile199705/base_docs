@@ -4,11 +4,11 @@ class MyPromise {
     constructor(exector) {
         this.status = 'pending'
         this.value = undefined
-        // this.reason = undefined
+        this.reason = undefined
         // 存放成功回调的值
-        // this.onResolved = []
-        // 存放失败回调的值
-        // this.onRejected = []
+        this.onResolvedFns = []
+        //存放失败回调的值
+        this.onRejectedFns = []
         try {
             exector((value) => {
                 this.resolve(value)
@@ -24,37 +24,48 @@ class MyPromise {
         if (this.status === 'pending') {
             this.status = 'fulfilled'
             this.value = value
-            // this.onResolved.forEach((value, index, array) => {
+            // this.onResolvedFns.forEach((value, index, array) => {
             //     this.onResolved[index](value)
             // })
         }
     }
 
-     reject(value) {
+    reject(value) {
         if(this.status === 'pending') {
             this.status = 'rejected'
-            this.value = value
-            // this.onRejected.forEach((value, index, array) => {
-            //     this.onRejected[index](value)
+            this.reason = value
+            // this.onRejectedFns.forEach((value, index, array) => {
+            //     this.onRejectedFns[index](value)
             // })
         }
      }
 
      then(onResolved, onRejected) {
-        if (typeof onResolved !== 'function') {
-            onResolved = function(value){}
+         onResolved = typeof onResolved === 'function' ? onResolved : value => value
+         onRejected = typeof onRejected === 'function' ? onRejected: reason => {
+             throw reason
+         }
+        if (this.status === 'fulfilled') {
+            console.log(this.value, '-=-=-=-=-=')
+            onResolved(this.value)
         }
-        if (typeof onRejected !== 'function') {
-            onResolved = function(err) {}
+        if (this.status === 'rejected') {
+            console.log(this.value, '@@@@@@')
+            onResolved(this.reason)
         }
-     }
+        if (this.status === 'pending') {
+            onResolved(this.reason)
+        }
+    }
 }
 
-const d = new MyPromise((resolve) => {
-    resolve('1')
-    // reject(3)
-}, reject => {
-    // reject(2)
+const d = new MyPromise((reslove, reject) => {
+
+})
+d.then(res => {
+    console.log(res, 'res=====')
+}, err => {
+    console.log(err, 'err=====')
 })
 
 console.log(d)

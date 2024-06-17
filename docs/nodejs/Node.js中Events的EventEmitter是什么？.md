@@ -233,5 +233,29 @@ console.log(222)
 // 111
 ```
 
+
 ## 总结
 Node.j许多成功的模块和框架都是基于EventEmitter的，因此学会EventEmitter的使用，并在业务代码中和框架封装中显得特别有用。
+
+## 拓展
+### 手写一个自定义的EventEmitter
+
+```javascript
+
+const util = require('util')
+const events = require('events')
+function InitEventEmitter() {
+    events.EventEmitter.call(this);
+}
+
+util.inherits(InitEventEmitter, events.EventEmitter)
+
+const init = new InitEventEmitter()
+
+init.on('start', (option) => {
+    console.log('start=====', option)
+})
+
+init.emit('start', '这是一个开始')
+
+```
