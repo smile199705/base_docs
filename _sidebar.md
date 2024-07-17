@@ -35,3 +35,5 @@
   * [GitHub 2FA（双因素身份验证） 于2024年3月13日开始执行提高软件安全标准？](docs/environment/GitHub%202FA（双因素身份验证）%20于2024年3月13日开始执行提高软件安全标准？.md)
 
 * 技术备忘录
+  * [Node.js开发常见NPM库汇总](docs/environment/Node.js开发常见NPM库汇总.md)
+  * [面经](docs/personal/板书.md)

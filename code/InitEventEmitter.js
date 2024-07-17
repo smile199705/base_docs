@@ -1,5 +1,5 @@
 
-const util = require('util')
+const util= require('util')
 const events = require('events')
 function InitEventEmitter() {
     events.EventEmitter.call(this);
@@ -12,5 +12,7 @@ const init = new InitEventEmitter()
 init.on('start', (option) => {
     console.log('start=====', option)
 })
+
+console.log(process.platform)
 
 init.emit('start', '这是一个开始')
