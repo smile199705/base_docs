@@ -36,4 +36,5 @@
 
 * 技术备忘录
   * [Node.js开发常见NPM库汇总](docs/environment/Node.js开发常见NPM库汇总.md)
-  * [面经](docs/personal/板书.md)
+
+[//]: # (  * [面经]&#40;docs/personal/板书.md&#41;)
